@@ -174,18 +174,19 @@ def fh(image,scale=1,sigma=0.8,min_size=20):
 
 image = skimage.io.imread('/home/sushmita/Documents/SUSHMITA/PROJECT1/lib_fh/self/version_2/input/113016.jpg')
 
+# Self
 a=time.time()
 labels = fh(image,scale=100,sigma=0.0,min_size=20)
 # (unique, counts) = np.unique(labels,return_counts=True)
 # print(len(unique))
 print(time.time()-a)
 
-# #Comparing with inbuilt
-# a=time.time()
-# labels = skimage.segmentation.felzenszwalb(image,scale=100,sigma=0.0,min_size=20)
-# # (unique, counts) = np.unique(labels,return_counts=True)
-# # print(len(unique))
-# print(time.time()-a)
+#Comparing with inbuilt
+a=time.time()
+labels = skimage.segmentation.felzenszwalb(image,scale=100,sigma=0.0,min_size=20)
+# (unique, counts) = np.unique(labels,return_counts=True)
+# print(len(unique))
+print(time.time()-a)
 
 # Saving boundary image
 boundary_image = skimage.segmentation.mark_boundaries(image,labels)
