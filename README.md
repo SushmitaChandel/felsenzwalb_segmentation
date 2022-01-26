@@ -1,6 +1,8 @@
 # felsenzwalb_segmentation
 Python implementation of felsenzwalb segmentation technique;
 
+Purely for research work;
+
 Ref: P. F. Felzenszwalb and D. P. Huttenlocher, Efficient graph-based
 image segmentation, International Journal of Computer Vision, vol.
 59, pp.167–181, 2004;
